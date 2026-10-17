@@ -1,7 +1,9 @@
 package service;
 
+import entity.Course;
 import entity.Enrollment;
 import entity.EnrollmentStatus;
+import entity.Student;
 import utility.EntityNotFoundException;
 
 import java.time.LocalDate;
@@ -16,8 +18,23 @@ public class EnrollmentService implements EnrollmentServiceInterface{
      */
     @Override
     public void enrollStudentInCourse(int studentId, int courseId,LocalDate date, EnrollmentStatus enrollmentStatus) throws EntityNotFoundException {
-        if(StudentService.students.isEmpty()) {
+        boolean studentExist = false, courseExist = false;
+        for(Student student : StudentService.students) {
+            if(student.getId() == studentId) {
+                studentExist = true;
+            }
+        }
+        if(!studentExist) {
             throw new EntityNotFoundException("No Such Student with id: "+studentId);
+        }
+
+        for(Course course : CourseService.courses) {
+            if(course.getId() == courseId) {
+                courseExist = true;
+            }
+        }
+        if(!courseExist) {
+            throw new EntityNotFoundException("No Such Courrse with id: "+courseId);
         }
         if(CourseService.courses.isEmpty()) {
             throw new EntityNotFoundException("No Such Course with id: "+courseId);
