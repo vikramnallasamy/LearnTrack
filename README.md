@@ -49,20 +49,21 @@ Mark enrollment as completed/cancelled
 ### 1. Clone the Repository
 
 git clone [https://github.com](https://github.com/vikramnallasamy/LearnTrack)
+
 cd your-repo-name
+
 cd src
 
 ### 2. Compile and Run
 You can run the application directly from your IDE (such as clicking the **Run** button on your main class file) or via the terminal:
 
-* **Using javac/java (No build tool):**
-  \`\`\`bash
+Using javac/java (No build tool):
+
   javac -d Main.java
+  
   java Main
-  \`\`\`
 
-
-
+  
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
