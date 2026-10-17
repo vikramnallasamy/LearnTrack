@@ -10,9 +10,9 @@ Enrollments
 
 The core of the project is a menu-based console application in Main.java:
 
-##Example features:
+## Example features:
 
-###Student Management
+### Student Management
 
 
 Add new student
@@ -24,7 +24,7 @@ Search student by ID
 Deactivate a student (set active = false instead of deleting)
 
 
-###Course Management
+### Course Management
 
 
 Add new course
@@ -34,7 +34,7 @@ View all courses
 Activate/Deactivate a course
 
 
-###Enrollment Management
+### Enrollment Management
 
 
 Enroll a student in a course
